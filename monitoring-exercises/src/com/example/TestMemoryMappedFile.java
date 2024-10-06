@@ -9,7 +9,8 @@ public class TestMemoryMappedFile {
 
 	public static void main(String[] args) {
 		File file = new File("src/data", "sample.txt");
-		try (FileChannel fc = new RandomAccessFile(file, "rw").getChannel();) {
+		try (@SuppressWarnings("resource")
+		FileChannel fc = new RandomAccessFile(file, "rw").getChannel();) {
 			MappedByteBuffer buffer = fc.map(FileChannel.MapMode.READ_WRITE, 0, (int) fc.size());
 			buffer.position((int) fc.size());
 			buffer.put("deneme".getBytes());

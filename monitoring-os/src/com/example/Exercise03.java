@@ -2,6 +2,7 @@ package com.example;
 
 public class Exercise03 {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		var t1 = Thread.ofPlatform(); // kernel thread
 		var t2 = Thread.ofVirtual();  // jvm/programmer/library --> kernel thread

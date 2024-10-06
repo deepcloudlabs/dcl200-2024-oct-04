@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Exercise02 {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		int x = 42; // 4-Byte
 		Integer y = 42; // 20-Byte

@@ -7,6 +7,7 @@ import java.nio.channels.FileChannel;
 
 public class CopyFile {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		try (FileChannel srcChannel = new FileInputStream(new File("src/data", "infile.iso")).getChannel();
 				FileChannel dstChannel = new FileOutputStream(new File("src/data", "outfile.iso")).getChannel();) {
