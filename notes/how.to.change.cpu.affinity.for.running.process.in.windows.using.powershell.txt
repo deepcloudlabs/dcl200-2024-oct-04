@@ -1,0 +1,26 @@
+PS C:\Users\binku> Get-Process mspaint
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    704      40    64060      69276       0.30  32972   1 mspaint
+
+
+PS C:\Users\binku> Get-Process mspaint | Select-Object ProcessorAffinity
+
+ProcessorAffinity
+-----------------
+             1217
+
+
+PS C:\Users\binku> $p = Get-Process mspaint
+PS C:\Users\binku> $p.ProcessorAffinity = 42
+PS C:\Users\binku> Get-Process mspaint | Select-Object ProcessorAffinity
+
+ProcessorAffinity
+-----------------
+               42
+
+
+PS C:\Users\binku> ForEach($PROCESS in GET-PROCESS mspaint) { $PROCESS.ProcessorAffinity=255}
+PS C:\Users\binku>
+

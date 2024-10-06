@@ -1,0 +1,7 @@
+Linux:
+Duration  : 4252 ms.
+Cost of cs: 1,063000
+
+Windows: 
+Duration  : 5448 ms.
+Cost of cs: 1.362000.

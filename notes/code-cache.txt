@@ -1,0 +1,17 @@
+-XX:InitialCodeCacheSize=128m
+-XX:ReservedCodeCacheSize=216m
+-XX:CodeCacheExpansionSize=128m
+
+Memory
+1. Heap: Developer -> new A()
+         GC -> Schema? Tune?
+		 Latency -> STW
+		 Througput?
+	Generational Heap	 
+2. PermGen: Max/MetaSpace -> Heap
+   Class Loader -> .class
+3. JIT Compiler -> CodeCache -> Pool
+   -XX:+SegmentedCodeCache
+   CodeCache: 3 segments   
+4. Constant Pool: String
+

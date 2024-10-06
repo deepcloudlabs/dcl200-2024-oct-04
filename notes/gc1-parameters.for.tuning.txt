@@ -1,0 +1,12 @@
+-Xms4g -Xmx64g
+
+-XX:+UseG1GC
+-XX:MaxGCPauseMillis=300
+-XX:G1HeapRegionSize=32m
+-XX:InitiatingHeapOccupancyPercent=40
+-XX:+UseStringDeduplication
+-XX:ParallelGCThreads=32
+-Xlog:gc*:file=c:/tmp/gc.log:time,level,tags
+Enhance Application's Throughput
+G1 Minor GC
+G1 Full GC
